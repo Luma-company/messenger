@@ -1,0 +1,100 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Хост: 127.0.0.1:3306
+-- Время создания: Окт 08 2026 г., 13:36
+-- Версия сервера: 10.1.48-MariaDB
+-- Версия PHP: 7.2.34
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- База данных: `Messenger`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `login` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `first_name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `last_name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `patronymic` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `login`, `password`, `first_name`, `last_name`, `patronymic`, `phone`) VALUES
+(0, 'Логин', 'Пароль', 'Имя', 'Фамилия', 'Отчество', 'Номер телеф'),
+(1, 'a.nikitin', 'wgF4oRNUyeVA', 'Александр', 'Никитин', 'Владимирович', '89332181960'),
+(2, 'i.mikhailov', 'ie3QF5NzfRiT', 'Ирина', 'Михайлова', 'Александровна', '89838637940'),
+(3, 'a.makarov', 'PjFyDt5TRSjL', 'Алексей', 'Макаров', 'Викторович', '89542351161'),
+(4, 'y.nikolaev', 'nt6qWK2FbGys', 'Юлия', 'Николаева', 'Владимировна', '89078161849'),
+(5, 'm.stepanov', 'RvPoo9btI8VQ', 'Матвей', 'Степанов', 'Михайлович', '89103413164'),
+(6, 'y.petrov', 'wW8eErcRwAGZ', 'Юлия', 'Петрова', 'Игоревна', '89534192832'),
+(7, 'a.orlov', 'qSa89ShDalNs', 'Анастасия', 'Орлова', 'Николаевна', '89503056413'),
+(8, 'd.makarov', 'xjHdux1u74P9', 'Даниил', 'Макаров', 'Олегович', '89376724238'),
+(9, 'd.lebedev', 'YvLVoKZvn5zd', 'Даниил', 'Лебедев', 'Павлович', '89532871012'),
+(10, 'e.nikolaev', 'V1eBOgQvCBeT', 'Егор', 'Николаев', 'Сергеевич', '89669784801'),
+(11, 'e.zakharov', 'yemw3Z8YliHO', 'Евгений', 'Захаров', 'Владимирович', '89514627048'),
+(12, 'd.popov', '22nEujBLQigL', 'Денис', 'Попов', 'Евгеньевич', '89893252880'),
+(13, 'i.ivanov', 'dbgfhqdDr7Zy', 'Иван', 'Иванов', 'Андреевич', '89543039117'),
+(14, 'e.zakharov17', 'BpwYXVWy0FgZ', 'Евгений', 'Захаров', 'Алексеевич', '89782489638'),
+(15, 'a.makarov52', 'sPv4aZ0hKdG9', 'Артём', 'Макаров', 'Евгеньевич', '89578713315'),
+(16, 'v.mikhailov', '5s83QMKbn8r5', 'Вероника', 'Михайлова', 'Николаевна', '89010310518'),
+(17, 'k.sokolov', 'bLtGm6aLPwJh', 'Ксения', 'Соколова', 'Алексеевна', '89997376311'),
+(18, 'm.lebedev', 'xPwenjl2oNBn', 'Матвей', 'Лебедев', 'Викторович', '89701065133'),
+(19, 's.vasilev', 'fQbtTdPv3jaR', 'София', 'Васильева', 'Викторовна', '89247317810'),
+(20, 'e.ivanov', '9rpVbnI2eAzo', 'Евгений', 'Иванов', 'Сергеевич', '89326773602'),
+(21, 'v.novikov', '8YKmODg2BTkU', 'Виктория', 'Новикова', 'Артёмовна', '89468723430'),
+(22, 'e.smirnov', 'pHRgJk2vsgZw', 'Евгений', 'Смирнов', 'Олегович', '89009788208'),
+(23, 't.kuznetsov', 'DmVzl68Ndt0I', 'Татьяна', 'Кузнецова', 'Сергеевна', '89361939909'),
+(24, 'm.stepanov34', '2pUn4KBQq3Ey', 'Милана', 'Степанова', 'Олеговна', '89353462475'),
+(25, 'm.ivanov', 'GcXQhYZz8rv2', 'Максим', 'Иванов', 'Артёмович', '89991183842'),
+(26, 'm.mikhailov', '3Df703bMSO06', 'Максим', 'Михайлов', 'Игоревич', '89427849808'),
+(27, 'o.vasilev', 'DaSiDPEe7Pn3', 'Ольга', 'Васильева', 'Владимировна', '89118244935'),
+(28, 'a.pavlov', '74YKTTdkXPFD', 'Анастасия', 'Павлова', 'Максимовна', '89401640052'),
+(29, 'k.petrov', 'psTKVQNX1LsX', 'Кирилл', 'Петров', 'Артёмович', '89868011280'),
+(30, 'd.kozlov', 'efO8iLzSXrF9', 'Даниил', 'Козлов', 'Алексеевич', '89620450533'),
+(31, 'm.zakharov', 'EkVHufmU9zah', 'Матвей', 'Захаров', 'Викторович', '89923226025'),
+(32, 'e.andreev', 'UcfXrQ2CzkCN', 'Егор', 'Андреев', 'Николаевич', '89421607337'),
+(33, 'e.mikhailov', 'PCcY1uR9kl8F', 'Екатерина', 'Михайлова', 'Александровна', '89365414586'),
+(34, 'e.morozov', 'SGcwLxAKG70g', 'Евгений', 'Морозов', 'Александрович', '89142940196'),
+(35, 'p.lebedev', 'WE04zJgBNIG7', 'Полина', 'Лебедева', 'Андреевна', '89693406088'),
+(36, 'a.volkov', 'wjCCCIX4eRyh', 'Артём', 'Волков', 'Викторович', '89159514846'),
+(37, 'd.kozlov25', 'G0NvGsEjAwEY', 'Дарья', 'Козлова', 'Алексеевна', '89662994680'),
+(38, 'i.lebedev', 'GgSMVz8JxdZd', 'Ирина', 'Лебедева', 'Олеговна', '89777387214'),
+(39, 't.morozov', 'egW0ZQPQAIF1', 'Тимофей', 'Морозов', 'Сергеевич', '89343320037'),
+(40, 'm.semenov', 'Jtm9G5XZ5NIC', 'Максим', 'Семёнов', 'Викторович', '89936763201'),
+(41, 'i.petrov', 'mdI3vZbzHzzv', 'Илья', 'Петров', 'Артёмович', '89083172788'),
+(42, 'a.nikolaev', '8gKvu7RtIt8f', 'Арсений', 'Николаев', 'Викторович', '89872774348'),
+(43, 'e.novikov', 'DAUohsywGSM3', 'Екатерина', 'Новикова', 'Артёмовна', '89143455812'),
+(44, 'v.makarov', 'IW8SAlII76HQ', 'Виктория', 'Макарова', 'Алексеевна', '89316658760'),
+(45, 'a.alekseev', 'UmVMiNA21ncH', 'Алиса', 'Алексеева', 'Александровна', '89967054668'),
+(46, 'e.nikolaev63', 'O0TD7txJJpAj', 'Евгений', 'Николаев', 'Николаевич', '89346706562'),
+(47, 'a.nikolaev51', 'Eg9FPXimI1X3', 'Андрей', 'Николаев', 'Александрович', '89990162720'),
+(48, 'p.sokolov', 'LTW0Fl8OUa0e', 'Полина', 'Соколова', 'Артёмовна', '89556464170'),
+(49, 'd.volkov', 'RmZMJHsGdqk3', 'Дмитрий', 'Волков', 'Николаевич', '89100330923'),
+(50, 'o.stepanov', 'N8sJ6KlAmwDW', 'Ольга', 'Степанова', 'Михайловна', '89745299124');
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
